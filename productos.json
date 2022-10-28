@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Roller facial",
+        "precio": 3000.00,
+        "thumbnailUrl": "/img/productos/rollerFacial.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Discos Desmaquillantes Reutilizables",
+        "precio": 1000.00,
+        "thumbnailUrl": "/img/productos/discosDesmaquillantes.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Gua sha de jade",
+        "precio": 2500.00,
+        "thumbnailUrl":"/img/productos/guaShaFacial.png" 
+    },
+    {
+        "id": 4,
+        "nombre": "Experiencia Cosmeto",
+        "precio": 3000.00,
+        "thumbnailUrl": "/img/productos/setExperiencia.png"
+    }
+]

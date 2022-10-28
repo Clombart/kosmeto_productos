@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discos desmaquillantes, Gua sha para masaje facial y experiencias disponibles para la compra">
+  <meta name="keywords" content="CUIDADO, PIEL, FACIAL, RIO NEGRO, ARGENTINA,">
+  <link rel="stylesheet" href="../css/kosmetocss.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Klee+One:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://kit.fontawesome.com/2a2b0023e5.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/af78025a59.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+  <!-- SCRIPTS CURSO JS-->
+  <script defer src="../js/variables.js"></script>
+  <script defer src="../js/funciones.js"></script>
+  <script defer src="../js/constructorPedido.js"></script>
+  <script defer src="../js/app.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- FIN SCRIPTS CURSO JS-->
+
+  <title>Kosmeto - Productos para regalar o regalarte</title>
+</head>
+
+<body>
+  <!-- COMIENZO DEL HEADER -->
+  <header id="index">
+    <nav class="navbar navbar-expand-md navbar-light ">
+      <div id="contenedorGral" class="container-fluid">
+        <div id="iconos" class="d-flex flex-row flex-fill justify-content-between align-items-center mx-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><img id="logo" src="../img/logo.png" alt="Logo Kosmeto"></a>
+          <a class="carrito" href="#rdc"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menuNavegacion">
+          <ul class="navbar-nav ms-auto me-auto nav-fill">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="tratamientos.html">Tratamientos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre_mi.html">Sobre Mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- FIN DEL HEADER -->
+
+  <!-- COMIENZO DEL MAIN -->
+  <main>
+    <div class="padre">
+      <h1>Productos</h1>
+      <div id="hijo-p" class="row hijo">
+
+      </div>
+
+      <h1 id="rdc">Resumen de Compra</h1>
+      <div class="hijo" id="hijo-r">
+
+        <!-- Izq -->
+        <div id="izq" class="izq">
+          <!--<h1 class="mb-3" id="rdc">Resumen de Compra</h1>-->
+          <p id="textoCarroVacio" class="mb-0">No hay productos en el carrito</p>
+
+          <div id="productosEnCarrito" class="d-flex justify-content-between">
+            <table id="tabla" class="table table-borderless ">
+              <tbody id="productosEnCarritoItems">
+                <template id="carro">
+                  <tr>
+                    <td class="table-cell-padding-y-1 text-start">Producto</td>
+                    <td>
+                      <button id="menos" class="botonesProductosCarrito menos">
+                        -
+                      </button>
+                    </td>
+                    <td class="table-cell-padding-y-1">1</td>
+                    <td>
+                      <button id="mas" class="botonesProductosCarrito mas">
+                        +
+                      </button>
+                    </td>
+                    <td class="table-cell-padding-y-1">$1000</td>
+                    <td class="table-cell-padding-y-1">
+                      <button id="trash" class="botonesProductosCarrito trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </template>
+              <tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Der -->
+        <div class="der">
+          <div class="mt-3 mb-3 anchotcontexto">
+            <div class="d-flex justify-content-between">
+              <h5 class="mt-1 mb-1">Subtotal</h5>
+              <h5 id="subtotal" class="mt-1 mb-1">$ 0</h5>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="form-check align-items-center ">
+                <input class="form-check-input mt-2" type="checkbox" value="" id="costoDeEnvio">
+                <label class="form-check-label" for="costoDeEnvio">
+                  Costo de envío
+                </label>
+              </div>
+              <h5 id="costoDeEnvioNumber" class="mt-1 mb-5">$ 0</h5>
+            </div>
+            <div class="total justify-content-between px-2 mb-5">
+              <h3 class="my-2">TOTAL</h3>
+              <h3 id="total" class="my-2">$ 0</h3>
+            </div>
+          </div>
+          <div class="container d-flex justify-content-evenly px-3 my-3">
+            <button id="vaciarCarrito" type="button" class="botonFinCompra">Vaciar Carrito</button>
+            <button type="button" id="btnfinalizarCompra" class="botonFinCompra" data-bs-toggle="modal"
+              data-bs-target="#dialogoCompraFinalizada" enabled>Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Botón Up-->
+    <div class="opacity-50">
+      <a href="#" class="top" data-aos="fade-up"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+
+    <!--Dialogo Compra Finalizada-->
+    <div class="modal fade" id="dialogoCompraFinalizada" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" id="myModal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Por favor, Complete los siguientes campos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="nombreApellido" class="form-label" required>Nombre y Apellido</label>
+              <input id="nombreApellido" type="text" class="form-control" placeholder="Ana Gonzalez" required>
+            </div>
+            <div class="mb-3">
+              <label for="emailComprador" class="form-label">e-mail</label>
+              <input type="email" id="emailComprador" class="form-control" placeholder="agonzalez@ejemplo.com" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" id="botonContinuar" class="btn btn-primary" data-bs-target="#compraTerminada"
+              data-bs-toggle="modal">Continuar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="compraTerminada" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Gracias por su compra!!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="divCompraTerminada" class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button id="botonok" class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- FIN DEL MAIN -->
+
+  <!-- COMIENZO DEL FOOTER -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="https://www.facebook.com/kosmetoallen" target="_blank"><i id="face"
+              class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/kosmetoallen/?hl=es" target="_blank"><i id="ig"
+              class="fab fa-instagram"></i></a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=542984673808&text=Kosmeto" target="_blank"><i id="wa"
+              class="fab fa-whatsapp"></i></a></li>
+        <li><a href="contacto.html"><i id="mail" class="far fa-envelope"></i></a></li>
+        <li><a href="contacto.html#ubicacion"><i id="map" class="fas fa-map-marker-alt"></i></a></li>
+      </ul>
+    </nav>
+    <h6>Copiright 2021</h6>
+  </footer>
+  <!-- FIN DEL FOOTER -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
